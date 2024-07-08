@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* container class giống với Bootstrap */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Định nghĩa độ rộng cho các breakpoint khác nhau */
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+
+  
+/* Đặt chiều cao cố định cho .directional */
+.directional {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 30px;
+    padding: 20px 60px;
+    z-index: 1000; /* Đảm bảo .directional nằm trên các phần tử khác */
+    box-sizing: border-box;
+}
+
+/* Thêm padding-top cho header để tránh bị che khuất bởi .directional */
+header {
+    background-color: #37517e;
+    padding-top: 60px; /* Điều chỉnh giá trị này theo chiều cao thực tế của .directional */
+}
+
+
+.solution__we {
+    display: flex;
+    justify-content: center;
+}
+
+
+.directional .sitename {
+    display: flex;
+}
+.directional .sitename a{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirect a {
+    text-decoration: none;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0 8px;
+}
+
+.redirect a:last-child {
+    background-color: #44A3D5;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.redirect a:last-child:hover {
+    opacity: 0.9;
+}
+
+.redirect a:not(.action-redirect) {
+    margin-right: 10px;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.redirect a:not(.action-redirect):hover {
+    background-color: #44A3D5;
+    border-radius: 1px;
+}
